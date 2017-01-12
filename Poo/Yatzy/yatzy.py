@@ -1,69 +1,57 @@
 class Yatzy:
 
     @staticmethod
-    def chance(*dice):
-        total = 0
-        for dado in list(dice):
-            total += dado
-
-        return total
+    def chance(*dados):
+        puntuacion = 0
+        for dado in dados:
+            puntuacion += dado
+        return puntuacion
 
     @staticmethod
-    def yatzy(dice):
-        counts = [0]*(len(dice)+1)
-        for die in dice:
-            counts[die-1] += 1
-        for i in range(len(counts)):
-            if counts[i] == 5:
-                return 50
+    def yatzy(*dice):
+        if dice.count(dice[0]) == 5:
+            return 50
         return 0
 
-    @staticmethod
-    def ones( d1,  d2,  d3,  d4,  d5):
-        sum = 0
-        if (d1 == 1):
-            sum += 1
-        if (d2 == 1):
-            sum += 1
-        if (d3 == 1):
-            sum += 1
-        if (d4 == 1):
-            sum += 1
-        if (d5 == 1):
-            sum += 1
 
-        return sum
-
+    #for numero in range(1,7):
+     #   if dice.count(numero) == 5:
+      #      return 50
+    #return 0'''
 
     @staticmethod
-    def twos( d1,  d2,  d3,  d4,  d5):
-        sum = 0
-        if (d1 == 2):
-             sum += 2
-        if (d2 == 2):
-             sum += 2
-        if (d3 == 2):
-             sum += 2
-        if (d4 == 2):
-             sum += 2
-        if (d5 == 2):
-             sum += 2
-        return sum
+    def ones(*dados):
+        #ONE = 1
+        #return dados.count(ONE) * ONE
+
+        suma = 0
+        for dado in dados:
+            if dado == 1:
+                suma += dado
+        return suma
+
 
     @staticmethod
-    def threes( d1,  d2,  d3,  d4,  d5):
-        s = 0
-        if (d1 == 3):
-             s += 3
-        if (d2 == 3):
-             s += 3
-        if (d3 == 3):
-             s += 3
-        if (d4 == 3):
-             s += 3
-        if (d5 == 3):
-             s += 3
-        return s
+    def twos(*dados):
+        #TWO = 2
+        #return dados.count(TWO) * TWO
+
+        suma = 0
+        for dado in dados:
+            if dado == 2:
+                suma += dado
+        return suma
+
+    @staticmethod
+    def threes(*dados):
+        #THREE = 3
+        #return dados.count(THREE) * THREE
+
+        suma = 0
+        for dado in dados:
+            if dado == 3:
+                suma += dado
+        return suma
 
 
     def __init__(self, d1, d2, d3, d4, _5):
@@ -74,12 +62,15 @@ class Yatzy:
         self.dice[3] = d4
         self.dice[4] = _5
 
-    def fours(self):
-        sum = 0
-        for at in range(5):
-            if (self.dice[at] == 4):
-                sum += 4
-        return sum
+    def fours(*dados):
+        #FOUR = 4
+        #return dados.count(FOUR) * FOUR
+
+        suma = 0
+        for dado in dados:
+            if dado == 4:
+                suma += dado
+        return suma
 
 
     def fives(self):
