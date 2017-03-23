@@ -1,0 +1,10 @@
+package org.foobarspam.Ragulador;
+
+public class GasHeater implements Thermometer {
+
+	@Override
+	public double read(AmbientTemperature temperaturaAmbiente) {
+		return 0;
+	}
+
+}
