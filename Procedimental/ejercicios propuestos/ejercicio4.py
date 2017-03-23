@@ -1,0 +1,5 @@
+print ("Introduce la anchura y la altura de la finca:")
+anchura = int (input())
+altura = int (input())
+print ("El area de la finca es:", anchura * altura)
+print ("El perimetro de la finca es:", 2*(anchura + altura))

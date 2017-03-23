@@ -1,0 +1,56 @@
+svg{
+ 	width:30%;
+ 	float: right;
+}
+#cursos{
+	width: 55%;
+}
+button{
+  	float: left;
+	cursor: pointer;
+	color: white;
+	width: 50px;
+	height: 35px;
+	font-size: 15px;
+	font-family: "sans-serif";
+	border: 1px solid black;
+	border-radius:5px;
+  	margin-right: 5px;
+	text-align:center;
+}
+#cursos button{
+  	background-color: #6495ED;
+  	width: 100px;
+  	height: 35px;
+}
+p{
+	float:left;
+  	margin-right: 5px;
+}
+.descripcion {
+  	font-size: 13px;
+}
+.verde{
+	background-color: #00CC00;
+}
+.rojo{
+	background-color: #FF0000;
+}
+.amarillo{
+	background-color: #FFD700;
+}
+.fucsia{
+	background-color: #FC0FC0;
+}
+.gris{
+	background-color: #C0C0C0;
+}
+.marron{
+	background-color: #DEB887;
+}
+.azul{
+	background-color: #4169E1;
+}
+.negro{
+	background-color: #000000;
+}

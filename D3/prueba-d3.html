@@ -1,0 +1,88 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Título de la Página</title>
+    <link rel="stylesheet" href="prueba-d3.css">
+    <script type="text/javascript" src="js/d3.js"></script>
+</head>
+
+<body>
+    <script type="text/javascript">
+        //var dataset = [25, 7, 5, 26, 11, 8, 25, 14, 23, 19,
+        //  14, 11, 22, 29, 11, 13, 12, 17, 18, 10,
+        //  24, 18, 25, 9, 3];
+
+        var dataset = []; //Iniciar array
+        for (var i = 0; i < 25; i++) { //Generar hasta 25 veces
+            var newNumber = Math.round(Math.random() * 30); //Math round genera números enteros (0-30)
+            dataset = dataset.concat(newNumber); //Añade nuevo número a la array
+        }
+
+        d3.select("body").selectAll("div")
+            .data(dataset)
+            .enter()
+            .append("div")
+            .attr("class", "bar")
+            .style("height", function(d) {
+                var barHeight = d * 5; //Incrementar la escala 5 veces.
+                return barHeight + "px";
+            });;
+
+        var w = 500; // WIDTH = ANCHURA
+        var h = 50; //HEIGTH = ALTURA
+        var svg = d3.select("body")
+            .append("svg")
+            .attr("width", w)
+            .attr("height", h);
+
+        var dataset = [5, 10, 15, 20, 25];
+        var circles = svg.selectAll("circle")
+            .data(dataset)
+            .enter()
+            .append("circle");
+
+        circles.attr("cx", function(d, i) {
+                return (i * 50) + 25;
+            })
+            .attr("cy", h / 2)
+            .attr("r", function(d) {
+                return d;
+            })
+            .attr("fill", "yellow")
+            .attr("stroke", "orange")
+            .attr("stroke-width", function(d) {
+                return d / 2;
+            });
+    </script>
+    <h1>Capítulo 1</h1>
+    <p>Este es un párrafo importante</p>
+    <svg width="50" height="50">
+        <circle cx="25" cy="25" r="22"
+    fill="blue" stroke="gray" stroke-width="2"/>
+    </svg>
+</body>
+
+</html>
+<!--<script type="text/javascript">
+        //var dataset = [25, 7, 5, 26, 11, 8, 25, 14, 23, 19,
+        //  14, 11, 22, 29, 11, 13, 12, 17, 18, 10,
+        //  24, 18, 25, 9, 3];
+
+        var dataset = []; //Iniciar array
+        for (var i = 0; i < 25; i++) { //Generar hasta 25 veces
+            var newNumber = Math.round(Math.random() * 30); //Math round genera números enteros (0-30)
+            dataset = dataset.concat(newNumber); //Añade nuevo número a la array
+        }
+
+        d3.select("body").selectAll("div")
+            .data(dataset)
+            .enter()
+            .append("div")
+            .attr("class", "bar")
+            .style("height", function(d) {
+                var barHeight = d * 5; //Incrementar la escala 5 veces.
+                return barHeight + "px";
+            });;
+    </script>
+    <svg width="500" height="50"></svg>-->
