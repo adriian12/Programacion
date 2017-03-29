@@ -1,0 +1,6 @@
+package org.foobarspam.Ragulador;
+
+public interface Heater {
+	public void engage(AmbientTemperature temperaturaAmbiente);
+	public void disengage(AmbientTemperature temperaturaAmbiente);
+}

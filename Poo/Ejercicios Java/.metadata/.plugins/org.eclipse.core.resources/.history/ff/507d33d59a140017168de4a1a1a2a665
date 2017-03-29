@@ -1,0 +1,15 @@
+package org.foobarspam.NumerosRomanosTest;
+
+import org.foobarspam.KataNumeralesRomanos.NumerosRomanosMain;
+import org.junit.Test;
+
+public class TestNumRomanos {
+
+	@Test
+	public void SumatoriosTest() {
+		String numeroRomano = "MDCCCLXXXVIII";
+		int decimalEsperado = 1888;
+		assertEquals(decimalEsperado, NumerosRomanosMain.conversor(numeroRomano));
+	}
+
+}
